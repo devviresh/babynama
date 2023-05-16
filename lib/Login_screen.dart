@@ -109,7 +109,9 @@ class _LoginPageState extends State<LoginPage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0)),
                 minWidth: double.infinity,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, HomePage.id);
+                },
                 child: Text('Sign In', style: TextStyle(color: Colors.black)),
               ),
               Divider(thickness: 1.0),

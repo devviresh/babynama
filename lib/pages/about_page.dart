@@ -12,6 +12,7 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             SizedBox(height: 30.0),
@@ -39,7 +40,55 @@ class _AboutState extends State<About> {
             Text('Why Babynama?',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30.0),),
             SizedBox(height: 15.0),
             Text('Our team of trusted Pediatricians will resolve your queries end-to-end on WhatsApp',textAlign: TextAlign.center,style: TextStyle(fontSize: 16.0),),
-            Card()
+            SizedBox(height: 10.0),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                color: Colors.white24,
+                borderRadius: BorderRadius.circular(10.0)
+              ),
+              child: Column(
+                children: [
+                  Image.asset('images/google.png',
+                  height: 50.0),
+                  SizedBox(height: 10.0),
+                  Text('No unverifid answers from Google or ChatGPT',textAlign: TextAlign.center,style: TextStyle(fontSize: 16.0),)
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                  color: Colors.white24,
+                  borderRadius: BorderRadius.circular(10.0)
+              ),
+              child: Column(
+                children: [
+                  Image.asset('images/pediatrician.png',
+                      height: 50.0),
+                  SizedBox(height: 10.0),
+                  Text('No Waiting for your pediatrician to reply or be available',textAlign: TextAlign.center,style: TextStyle(fontSize: 16.0),)
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                  color: Colors.white24,
+                  borderRadius: BorderRadius.circular(10.0)
+              ),
+              child: Column(
+                children: [
+                  Image.asset('images/ambulance.png',
+                      height: 50.0),
+                  SizedBox(height: 10.0),
+                  Text('No unnecessary emergency hospital visits, even at night',textAlign: TextAlign.center,style: TextStyle(fontSize: 16.0),)
+                ],
+              ),
+            ),
           ],
         ),
       )

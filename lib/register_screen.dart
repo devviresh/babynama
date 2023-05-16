@@ -123,7 +123,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0)),
                 minWidth: double.infinity,
-                onPressed: isChecked ? () {} : null,
+                onPressed: isChecked ? () {
+                  Navigator.pushNamed(context, LoginPage.id);
+                } : null,
                 child: Text(
                   'Sign Up',
                   style: TextStyle(color: Colors.black),
